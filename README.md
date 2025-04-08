@@ -1,6 +1,6 @@
 # Xetra ETL Pipeline
 
-This project implements a production-ready ETL (Extract, Transform, Load) pipeline in Python to process the Xetra dataset from Deutsche Börse Group. The pipeline extracts trading data from a public AWS S3 bucket, applies transformations to generate a report, and loads the results into a target AWS S3 bucket.
+This project implements a production-ready ETL (Extract, Transform, Load) pipeline in Python to process the Xetra dataset from Deutsche Börse Group. Xetra stands for Exchange Electronic Trading and it is the trading platform of the Deutsche Börse Group. The pipeline extracts trading data from a public AWS S3 bucket, applies transformations to generate a report, and loads the results into a target AWS S3 bucket.
 
 ## Project Overview
 
