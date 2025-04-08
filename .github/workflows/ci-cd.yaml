@@ -12,7 +12,7 @@ on:
       run_pipeline:
         description: 'Run the pipeline? (true/false)'
         required: false
-        default: 'true'
+        default: false
 
 jobs:
   lint:
@@ -22,7 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
@@ -32,7 +32,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv
 
-      - name: Install dependencies
+      - name: Install dependencies from Pipfile
         run: |
           pipenv install --dev --system
 
@@ -48,7 +48,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
@@ -58,7 +58,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv
 
-      - name: Install dependencies
+      - name: Install dependencies from Pipfile
         run: |
           pipenv install --dev --system
           pip install pytest
